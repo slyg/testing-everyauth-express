@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<p>
+{% if everyauth.loggedIn %}
+You're logged ;) <a href="/logout" class="btn btn-primary">Logout</a>
+{% else %}
+You're not logged :( <a href="/">Go home</a>
+{% endif %}
+</p>
+{% endblock %}

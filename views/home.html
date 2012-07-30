@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+	
+	<h2>
+	Welcome, 
+	{% if everyauth.loggedIn %}
+		{{ everyauth.twitter.user.name }}{{ everyauth.google.user.name }}
+        {% else %}
+		Dude (plz login)
+        {% endif %}
+	</h2>
+
+	<p>
+	{% if everyauth.loggedIn %}
+		<a href="/logout" class="btn btn-default">Logout</a>
+	{% else %}
+		<a href="/auth/twitter" class="btn btn-primary">Login w/ your Twitter account</a> <a href="/auth/google" class="btn btn-primary">Login w/ your Google account</a>
+	{% endif %}
+	</p>
+
+{% endblock %}
+
