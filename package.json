@@ -1,11 +1,9 @@
 {
+  "name":"everyauth-testing",
   "version": "0.0.1",
   "dependencies" : {
-    "express"	: "<=2.5.9",
+    "express"	: "2.5.9",
     "swig" 	:  "*",
     "everyauth" :  "*"
-  },
-  "engine": {
-    "node": ">=0.8"
   }
 }
